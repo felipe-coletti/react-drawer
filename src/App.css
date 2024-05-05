@@ -28,6 +28,7 @@
 
 .link {
     color: var(--secondary-text-color);
+    font-size: 0.875rem;
     padding: 1rem;
     width: 100%;
 }
