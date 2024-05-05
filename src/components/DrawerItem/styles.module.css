@@ -1,0 +1,14 @@
+.item {
+    display: flex;
+}
+
+.link {
+    color: var(--secondary-text-color);
+    font-size: 0.875rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.link:hover {
+    background-color: var(--secondary-background-color);
+}
