@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from './styles.module.css'
 
-const DrawerItem = ({ href, children }) => {
+const DrawerItem = ({ selected, href, children }) => {
     return (
         <li className={styles.item}>
-            <a className={styles.link} href={href}>
+            <a className={selected ? styles.selectedLink : styles.unselectedLink} href={href}>
                 {children}
             </a>
         </li>

@@ -2,13 +2,22 @@
     display: flex;
 }
 
-.link {
-    color: var(--secondary-text-color);
-    font-size: 0.875rem;
-    padding: 1rem;
-    width: 100%;
+.selectedLink {
+    background-color: var(--highlight-color);
+    color: var(--primary-background-color);
 }
 
-.link:hover {
+.unselectedLink {
+    color: var(--secondary-text-color);
+}
+
+.unselectedLink:hover {
     background-color: var(--secondary-background-color);
+}
+
+.selectedLink, .unselectedLink {
+    font-size: 0.875rem;
+    padding: 1rem;
+    text-decoration: none;
+    width: 100%;
 }

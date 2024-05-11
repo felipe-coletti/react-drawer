@@ -10,13 +10,25 @@ function App() {
     const openDrawer = () => setOpen(true)
     const closeDrawer = () => setOpen(false)
 
+    const routes = [
+        {
+            name: 'Página 1',
+            path: '/'
+        },
+        {
+            name: 'Página 2',
+            path: '/page-2'
+        }
+    ]
+
     return(
         <div className='container'>
             <button className='button' onClick={openDrawer}>Abrir drawer</button>
             <Drawer isOpen={open} onClose={closeDrawer}>
                 <DrawerList>
-                    <DrawerItem>Página 1</DrawerItem>
-                    <DrawerItem>Página 2</DrawerItem>
+                    {routes.map((route, i) => (
+                        <DrawerItem selected={window.location.pathname == route.path} href={route.path} key={i}>{route.name}</DrawerItem>
+                    ))}
                 </DrawerList>
             </Drawer>
         </div>
