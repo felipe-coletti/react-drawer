@@ -1,11 +1,7 @@
 import styles from './styles.module.css'
 
-const DrawerItem = ({ children }) => {
-    return (
-        <ul className={styles.list}>
-            {children}
-        </ul>
-    )
+const DrawerList = ({ children }) => {
+    return <ul className={styles.list}>{children}</ul>
 }
 
-export default DrawerItem
+export default DrawerList
