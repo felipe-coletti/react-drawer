@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import styles from './styles.module.css'
 import { Icon } from '@iconify/react'
 
-const Drawer = ({ isOpen, onClose, children }) => {
+const DrawerRoot = ({ isOpen, onClose, children }) => {
     useEffect(() => {
         if (isOpen) {
             const handleEsc = (event) => {
@@ -36,4 +36,4 @@ const Drawer = ({ isOpen, onClose, children }) => {
     )
 }
 
-export default Drawer
+export default DrawerRoot

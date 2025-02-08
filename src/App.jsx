@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import Drawer from './components/Drawer'
-import DrawerList from './components/DrawerList'
-import DrawerItem from './components/DrawerItem'
+import { Drawer } from './components/Drawer'
 
 function App() {
     const [open, setOpen] = useState(false)
@@ -24,13 +22,13 @@ function App() {
     return(
         <div className='container'>
             <button className='button' onClick={openDrawer}>Abrir drawer</button>
-            <Drawer isOpen={open} onClose={closeDrawer}>
-                <DrawerList>
+            <Drawer.Root isOpen={open} onClose={closeDrawer}>
+                <Drawer.List>
                     {routes.map((route, i) => (
-                        <DrawerItem selected={window.location.pathname == route.path} href={route.path} key={i}>{route.name}</DrawerItem>
+                        <Drawer.Item selected={window.location.pathname == route.path} href={route.path} key={i}>{route.name}</Drawer.Item>
                     ))}
-                </DrawerList>
-            </Drawer>
+                </Drawer.List>
+            </Drawer.Root>
         </div>
     )
 }
